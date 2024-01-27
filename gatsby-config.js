@@ -6,5 +6,15 @@ module.exports = {
     title: `Gatsby-Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: `${__dirname}/files/blog`,
+      }
+    }
+  ],
 }
