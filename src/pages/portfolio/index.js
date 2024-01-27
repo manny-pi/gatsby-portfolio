@@ -4,7 +4,7 @@ import Layout from "../../components/layout.js";
 export default function LWMIndex() {
   return (
     <Layout>
-      <h1>Blog</h1>
+      <h1>Portfolio</h1>
     </Layout>
   );
 }
