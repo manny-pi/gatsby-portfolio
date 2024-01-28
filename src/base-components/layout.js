@@ -1,13 +1,24 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { ButtonGroup, Button } from "@material-tailwind/react";
 
 function Header(props) {
   return (
     <div id="header">
-      <div><Link to="/">Home</Link></div>
-      <div><Link to="/blog">Blog</Link></div>
-      <div><Link to="/learn-with-me">Learn with Me</Link></div>
-      <div><Link to="/portfolio">Portfolio</Link></div>
+      <ButtonGroup variant="outlined">
+        <Button>
+          <Link to="/">Home</Link>
+        </Button>
+        <Button>
+          <Link to="/blog">Blog</Link>
+        </Button>
+        <Button>
+          <Link to="/learn-with-me">Learn Wih Me</Link>
+        </Button>
+        <Button>
+          <Link to="/portfolio">Portfolio</Link>
+        </Button>
+      </ButtonGroup>
     </div>
   );
 }

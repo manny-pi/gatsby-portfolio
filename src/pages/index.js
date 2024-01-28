@@ -7,7 +7,6 @@ export default function Index() {
     <Layout>
       <div id="main-index-page">
         <h1>Hi, I'm Prince!</h1>
-        <Button>Click Me!</Button>
       </div>
     </Layout>
   )
