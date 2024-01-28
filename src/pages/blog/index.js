@@ -8,9 +8,10 @@ export default function BlogIndex({ data }) {
     <Layout>
       {nodes.map((node) => {
         return (
-          <div key={node.id}>
+          <div className="blog-content-card" key={node.id}>
             <h2 className="content-link"><Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link></h2>
-              {node.frontmatter.date}
+            <h3>{node.frontmatter.date}</h3>
+            <p><em>{node.excerpt}</em></p>
           </div>
         );
       })}
@@ -23,6 +24,7 @@ export const data = graphql`
     allMdx {
       nodes {
         id
+        excerpt
         frontmatter {
           title
           slug

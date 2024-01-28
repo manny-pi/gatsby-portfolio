@@ -10,4 +10,4 @@ This is good. However, with an ever-increasing number of subjects, tracking my p
 
 ## How does it work?
 
-I use several resources when I'm learning a subject. From books to online courses, I use anything and everything that helps me improve. 
+I use several resources when I'm learning a subject. From books to online courses, I use anything and everything that helps me improve. The files have the an abbreviation of the topic/domain prepended to it.
