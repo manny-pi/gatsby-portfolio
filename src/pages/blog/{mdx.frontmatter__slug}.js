@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../../components/layout.js";
+import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
 
 export default function FirstPost({ data, children }) {

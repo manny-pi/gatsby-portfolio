@@ -1,6 +1,6 @@
-import * as React from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../../components/layout.js";
+import * as React from "react";
+import Layout from "../../base-components/layout.js";
 
 export default function BlogIndex({ data }) {
   const nodes = data.allMdx.nodes;
