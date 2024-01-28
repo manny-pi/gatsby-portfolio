@@ -20,7 +20,7 @@ export const data = graphql`
       frontmatter {
         title
         slug
-        date
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
