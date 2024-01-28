@@ -11,7 +11,6 @@ const headerStyles = {
   alignItems: "center",
 }
 
-
 function Header(props) {
   return (
     <div style={headerStyles}>
@@ -22,7 +21,7 @@ function Header(props) {
   );
 }
 
-export default function Layout({ props, children }) {
+export default function Layout({ children }) {
   return (
     <div>
       <Header />
