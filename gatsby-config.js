@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-blogMdxOptions = {
+blogFilesystemOptions = {
   resolve: "gatsby-source-filesystem",
   options: {
     name: "blog",
@@ -10,7 +10,7 @@ blogMdxOptions = {
   },
 };
 
-lwmMdxOptions = {
+lwmFilesystemOptions = {
   resolve: "gatsby-source-filesystem",
   options: {
     name: "learn-with-me",
@@ -18,7 +18,7 @@ lwmMdxOptions = {
   },
 };
 
-portfolioOptions = {
+portfolioFilesystemOptions = {
   resolve: "gatsby-source-filesystem",
   options: {
     name: "portfolio",
@@ -34,8 +34,8 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-mdx",
-    blogMdxOptions,
-    lwmMdxOptions,
-    portfolioOptions
+    blogFilesystemOptions,
+    lwmFilesystemOptions,
+    portfolioFilesystemOptions
   ],
 };
