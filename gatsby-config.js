@@ -18,6 +18,14 @@ lwmMdxOptions = {
   },
 };
 
+portfolioOptions = {
+  resolve: "gatsby-source-filesystem",
+  options: {
+    name: "portfolio",
+    path: `${__dirname}/src/content/portfolio`,
+  },
+};
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby-Portfolio`,
@@ -28,5 +36,6 @@ module.exports = {
     "gatsby-plugin-mdx",
     blogMdxOptions,
     lwmMdxOptions,
+    portfolioOptions
   ],
 };
