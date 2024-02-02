@@ -7,12 +7,16 @@ export default function BlogIndex({ data }) {
   return (
     <Layout>
       {nodes.map((node) => {
+        let fm = node.frontmatter;
         return (
-          <div className="blog-content-card" key={node.id}>
-            <h2 className="content-link"><Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link></h2>
-            <h3>{node.frontmatter.date}</h3>
-            <p><em>{node.excerpt}</em></p>
-          </div>
+          <>
+            <div className="blog-content-card" key={node.id}>
+              <h2 className="content-link"><Link to={fm.slug}>{fm.title}</Link></h2>
+              <h3>{fm.date}</h3>
+              <p><em>{node.excerpt}</em></p>
+            </div>
+          </>
+
         );
       })}
     </Layout>

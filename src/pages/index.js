@@ -1,6 +1,5 @@
 import * as React from "react";
 import Layout from "../base-components/layout.js";
-import { Button } from "@material-tailwind/react";
 
 export default function Index() {
   return (

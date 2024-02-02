@@ -13,7 +13,7 @@ function Header(props) {
           <Link to="/blog">Blog</Link>
         </Button>
         <Button>
-          <Link to="/learn-with-me">Learn Wih Me</Link>
+          <Link to="/learn-with-me">Learn With Me</Link>
         </Button>
         <Button>
           <Link to="/portfolio">Portfolio</Link>
