@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
 
-export default function FirstPost({ data, children }) {
+export default function BlogPost({ data, children }) {
   const frontmatter = data.mdx.frontmatter;
   return (
     <Layout>
