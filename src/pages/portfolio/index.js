@@ -1,15 +1,23 @@
 import * as React from "react";
 import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
+import { Button, ButtonGroup } from "@material-tailwind/react";
+import { Link } from "gatsby";
 
 export default function LWMIndex({ data }) {
   let nodes = data.allMdx.nodes;
   return (
     <Layout>
-      <h1>Portfolio</h1>
       <div>
         {nodes.map((node) => {
-          return <div key={node.id}>{node.frontmatter.title}</div>;
+          let fm = node.frontmatter;
+          return (
+            <div key={node.id}>
+              <Link to={fm.slug}>
+                <Button variant="text">{fm.title}</Button>
+              </Link>
+            </div>
+          );
         })}
       </div>
     </Layout>

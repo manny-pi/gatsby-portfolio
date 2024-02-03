@@ -4,9 +4,13 @@ import Header from "./header.js";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div id="layout">
       <Header />
-      {children}
+      <div id="content-area-wrapper">
+        <div>
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
