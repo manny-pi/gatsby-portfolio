@@ -9,14 +9,13 @@ export default function BlogIndex({ data }) {
       {nodes.map((node) => {
         let fm = node.frontmatter;
         return (
-          <>
+          <div>
             <div className="blog-content-card" key={node.id}>
               <h2 className="content-link"><Link to={fm.slug}>{fm.title}</Link></h2>
               <h3>{fm.date}</h3>
               <p><em>{node.excerpt}</em></p>
             </div>
-          </>
-
+          </div>
         );
       })}
     </Layout>
@@ -25,14 +24,13 @@ export default function BlogIndex({ data }) {
 
 export const data = graphql`
   query {
-    allMdx {
+    allMdx(filter: { frontmatter: { app: { eq: "blog" } } }) {
       nodes {
         id
-        excerpt
         frontmatter {
           title
           slug
-          date(formatString: "DD MMMM, YYYY")
+          date
         }
       }
     }

@@ -21,13 +21,15 @@ export default function LWMIndex({ data }) {
   );
 }
 
-export const query = graphql`
+export const data = graphql`
   query {
-    allMdx {
+    allMdx(filter: { frontmatter: { app: { eq: "learn-with-me" } } }) {
       nodes {
+        id
         frontmatter {
           title
           slug
+          date
         }
       }
     }
