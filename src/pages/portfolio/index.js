@@ -5,21 +5,21 @@ import { Button, ButtonGroup } from "@material-tailwind/react";
 import { Link } from "gatsby";
 
 export default function LWMIndex({ data }) {
-  let nodes = data.allMdx.nodes;
+  const nodes = data.allMdx.nodes;
   return (
     <Layout>
-      <div>
-        {nodes.map((node) => {
-          let fm = node.frontmatter;
-          return (
-            <div key={node.id}>
-              <Link to={fm.slug}>
-                <Button variant="text">{fm.title}</Button>
-              </Link>
+      {nodes.map((node) => {
+        let fm = node.frontmatter;
+        return (
+          <div key={node.id}>
+            <div className="blog-content-card">
+              <h2 className="content-link"><Link to={fm.slug}>{fm.title}</Link></h2>
+              <h3>{fm.date}</h3>
+              <p><em>{node.excerpt}</em></p>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </Layout>
   );
 }
