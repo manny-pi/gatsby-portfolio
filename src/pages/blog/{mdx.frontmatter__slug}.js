@@ -3,12 +3,23 @@ import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
 
 export default function BlogPost({ data, children }) {
-  const frontmatter = data.mdx.frontmatter;
+  const mdxNode = data.mdx;
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <h2 id={frontmatter.slug}>{frontmatter.date}</h2>
+      <h1>{mdxNode.frontmatter.title}</h1>
+      <section>
+      <div>
+        <p>
+          <b>Date Posted:</b> {mdxNode.frontmatter.date}
+        </p>
+        <p>
+          <b>Last Modified:</b> {mdxNode.parent.modifiedTime}
+        </p>
+      </div>
+      </section>
+      <section id="portfolio-post-content">
         {children}
+      </section>
     </Layout>
   );
 }
@@ -20,6 +31,11 @@ export const data = graphql`
         title
         slug
         date(formatString: "MMMM DD, YYYY")
+      }
+      parent {
+        ... on File {
+          modifiedTime(formatString:"MMM DD, YYYY")
+        }
       }
     }
   }

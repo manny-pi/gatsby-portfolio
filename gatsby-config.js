@@ -1,3 +1,7 @@
+/*
+`gatsby-config` is for ... 
+*/
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */

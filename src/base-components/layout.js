@@ -7,9 +7,7 @@ export default function Layout({ children }) {
     <div id="layout">
       <Header />
       <div id="content-area-wrapper">
-        <div>
           {children}
-        </div>
       </div>
     </div>
   );

@@ -33,8 +33,10 @@ a:link {
 }
 
 #main-index-page {
-    display: flex;
-    justify-content: center;
+  height: 1vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #content-area-wrapper {
@@ -44,5 +46,8 @@ a:link {
 }
 
 .portfolio-link {
-  margin: 5rem; 
+  margin: 5rem;
+}
+
+#portfolio-post-content {
 }
