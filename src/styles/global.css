@@ -12,13 +12,19 @@ a:link {
   text-decoration-line: none;
 }
 
+/* General layout */
+#layout {
+  background-color: blanchedalmond;
+}
+
 #header {
   margin: 0;
-  padding: 0;
-  height: 5rem;
-  background: grey;
+  padding: 10px;
+  background: white;
+
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -41,8 +47,8 @@ a:link {
 
 #content-area-wrapper {
   margin-top: 50px;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .portfolio-link {
