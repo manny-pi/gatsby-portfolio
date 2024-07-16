@@ -1,7 +1,6 @@
 import * as React from "react";
 import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
-import { Button, ButtonGroup } from "@material-tailwind/react";
 import { Link } from "gatsby";
 
 export default function LWMIndex({ data }) {

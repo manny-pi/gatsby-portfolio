@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { ButtonGroup, Button } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 
 export default function Header(props) {
   return (
