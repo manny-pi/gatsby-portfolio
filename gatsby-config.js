@@ -30,18 +30,27 @@ portfolioFilesystemOptions = {
   },
 };
 
+s3hostingOptions = {
+  resolve: "gatsby-plugin-s3",
+  options: {
+    bucketName: "my-gatsby-portfolio"
+  }
+}
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby-Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
+  
   plugins: [
     "gatsby-plugin-postcss",
     blogFilesystemOptions,
     lwmFilesystemOptions,
     portfolioFilesystemOptions,
     "gatsby-plugin-mdx",
-    "gatsby-transformer-remark"
+    "gatsby-transformer-remark",
+    s3hostingOptions
   ],
 };
 
