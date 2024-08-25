@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Button } from "@material-tailwind/react";
+
+function Button({ children }) {
+  return <div className="header-button">{children}</div>;
+}
 
 export default function Header(props) {
   return (
     <div id="header">
-        <Link to="/" activeClassName="Link">
-          <Button>Home</Button>
-        </Link>
-
+      <div id="header-content-links">
         <Link to="/blog" activeClassName="Link">
           <Button>Blog</Button>
         </Link>
@@ -20,6 +20,13 @@ export default function Header(props) {
         <Link to="/portfolio" activeClassName="Link">
           <Button>Portfolio</Button>
         </Link>
+      </div>
+
+      <div id="header-about-link">
+        <Link to="/" activeClassName="Link">
+          <Button>About</Button>
+        </Link>
+      </div>
     </div>
   );
 }

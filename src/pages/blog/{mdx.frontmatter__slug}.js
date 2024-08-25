@@ -17,7 +17,7 @@ export default function BlogPost({ data, children }) {
         </p>
       </div>
       </section>
-      <section id="portfolio-post-content">
+      <section id="blog-post-content">
         {children}
       </section>
     </Layout>

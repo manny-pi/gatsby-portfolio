@@ -12,30 +12,55 @@ a:link {
   text-decoration-line: none;
 }
 
-/* General layout */
-#layout {
-  background-color: blanchedalmond;
+main {
+  padding: 50px;
 }
+
+/* Layout Style */
+/* #layout {
+} */
 
 #header {
   margin: 0;
-  padding: 10px;
+  padding: 25px;
   background: white;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-button {
+  border: black solid 5px;
+  padding: 25px;
+  margin: 5px; 
+}
+
+.header-button:hover {
+  background-color: aqua;
+}
+
+#header-content-links {
+  display: flex;
+}
+
+/* Trying to target the 'About' button. */
+#header-about-link > Link:hover {
+  background-color: red;
 }
 
 .content-link a:hover {
   background-color: aqua;
 }
 
+/* Content Style */ 
 .blog-content-card {
   margin-top: 5px;
   margin-bottom: 25px;
   padding: 5px;
+}
+
+.post-content-wrapper {
+  margin-top: 25px; 
 }
 
 #main-index-page {
@@ -57,5 +82,4 @@ a:link {
 
 .section {
   border: 10px solid black;
-  
 }
