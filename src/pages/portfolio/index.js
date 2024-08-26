@@ -4,10 +4,9 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
 // Filter button to select open-source contributions and projects
-function filter() {
+// function filter() {
   
-}
-
+// }
 
 export default function LWMIndex({ data }) {
   const nodes = data.allMdx.nodes;
