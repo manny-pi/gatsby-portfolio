@@ -10,14 +10,14 @@ export default function Index() {
         <p>
           And it's a pleasure to meet you - figuratively speaking of course.
         </p>
-        <section class="blog-post-section">
+        <section className="blog-post-section">
           <h2>About Me</h2>
           <p>
             I'm an <b>Information Scientist</b> from the University of Maryland,
             College Park (grad. 2023).
           </p>
         </section>
-        <section class="blog-post-section">
+        <section className="blog-post-section">
           <h2>My Interests</h2>
           <p>
             Learning is my greatest attribute. I love gathering information and
