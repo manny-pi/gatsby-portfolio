@@ -3,32 +3,40 @@ import * as React from "react";
 import Layout from "../../base-components/layout.js";
 
 function TagSelector({ nodes }) {
+
+  function filterPosts() {
+    console.log("Filtering posts...");
+  }
+  
   // Get all the tags for the blog posts
   let allTags = [];
   let tags;
-  {
-    nodes.forEach((node) => {
-      // Handle cases where there are no tags on the post yet.
-      try {
-        tags = node.frontmatter.tags;
-        tags.forEach((tag) => {
-          if (!allTags.includes(tag)) {
-            allTags.push(tag);
-          }
-        });
-      } catch (e) {
-        /* Do nothing */
-      }
-    });
-  }
+  nodes.forEach((node) => {
+    // Handles the cases where the post doesn't have tags yet.
+    try {
+      tags = node.frontmatter.tags;
+      tags.forEach((tag) => {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag);
+        }
+      });
+    } catch (e) {
+      /* Do nothing */
+    }
+  });
 
   return (
     <div>
-      <select name="tags">
-        {allTags.map((tag) => {
-          return (<option value={tag}>{tag}</option>);
-        })}
-      </select>
+      <form onClick={filterPosts}>
+          {allTags.map((tag) => {
+            return (
+              <div className="filter-button">
+                <label htmlFor={tag}>{tag}</label>
+                <input type="checkbox" id={tag} name={tag} value={tag} />
+              </div>
+            );
+          })}
+      </form>
     </div>
   );
 }
