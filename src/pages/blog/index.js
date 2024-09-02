@@ -4,18 +4,20 @@ import Layout from "../../base-components/layout.js";
 
 function TagSelector({ nodes }) {
 
+  let {selectedTags, setSelectedTags} = React.useState([]);
+  
   function filterPosts() {
-    console.log("Filtering posts...");
+    let form = document.querySelector("form");
+    let data = new FormData(form);
+    // setSelectedTags(Array.from(data.keys()));
   }
   
   // Get all the tags for the blog posts
   let allTags = [];
-  let tags;
   nodes.forEach((node) => {
     // Handles the cases where the post doesn't have tags yet.
     try {
-      tags = node.frontmatter.tags;
-      tags.forEach((tag) => {
+      node.frontmatter.tags.forEach((tag) => {
         if (!allTags.includes(tag)) {
           allTags.push(tag);
         }
@@ -26,13 +28,13 @@ function TagSelector({ nodes }) {
   });
 
   return (
-    <div>
+    <div className="post-filter">
       <form onClick={filterPosts}>
           {allTags.map((tag) => {
             return (
               <div className="filter-button">
-                <label htmlFor={tag}>{tag}</label>
                 <input type="checkbox" id={tag} name={tag} value={tag} />
+                <label htmlFor={tag}>{tag}</label>
               </div>
             );
           })}
@@ -53,22 +55,22 @@ export default function BlogIndex({ data }) {
       <div>
         <TagSelector nodes={nodes} />
       </div>
-      {nodes.map((node) => {
-        let fm = node.frontmatter;
-        return (
-          <div key={node.id}>
-            <div className="blog-content-card">
-              <h2 className="content-link">
-                <Link to={fm.slug}>{fm.title}</Link>
-              </h2>
-              <h3>{fm.date}</h3>
-              <p>
-                <em>{node.excerpt}</em>
-              </p>
+      <div>
+        {nodes.map((node) => {
+          let fm = node.frontmatter;
+          return (
+            <div key={node.id}>
+              <div className="blog-content-card">
+                <h2 className="content-link">
+                  <Link to={fm.slug}>{fm.title}</Link>
+                </h2>
+                <p>{fm.date}</p>
+                <p><em>{fm.description}</em></p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </Layout>
   );
 }
@@ -83,6 +85,7 @@ export const data = graphql`
           slug
           date
           tags
+          description
         }
       }
     }

@@ -3,12 +3,13 @@ import Header from "./header.js";
 
 export default function Layout({ children }) {
   return (
-    <div id="layout">
-      <div className="page-wrapper"></div>
-      <Header />
-      <main>
-        <div id="content-area-wrapper">{children}</div>
-      </main>
+    <div className="layout">
+      <div className="page-wrapper">
+        <Header />
+        <main>
+          <div className="content-area-wrapper">{children}</div>
+        </main>
+      </div>
     </div>
   );
 }

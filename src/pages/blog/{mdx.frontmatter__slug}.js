@@ -8,18 +8,20 @@ export default function BlogPost({ data, children }) {
     <Layout>
       <h1>{mdxNode.frontmatter.title}</h1>
       <section>
-      <div>
         <p>
           <b>Date Posted:</b> {mdxNode.frontmatter.date}
         </p>
+        <b>Last Modified:</b> {mdxNode.parent.modifiedTime}
         <p>
-          <b>Last Modified:</b> {mdxNode.parent.modifiedTime}
+          <b>Tags</b>:
+          <div className="tag-list">
+            {mdxNode.frontmatter.tags.map((tag) => {
+              return <div className="tag">{tag}</div>;
+            })}
+          </div>
         </p>
-      </div>
       </section>
-      <section id="blog-post-content">
-        {children}
-      </section>
+      <section id="blog-post-content">{children}</section>
     </Layout>
   );
 }
@@ -31,10 +33,12 @@ export const data = graphql`
         title
         slug
         date(formatString: "MMMM DD, YYYY")
+        tags
+        description
       }
       parent {
         ... on File {
-          modifiedTime(formatString:"MMM DD, YYYY")
+          modifiedTime(formatString: "MMM DD, YYYY")
         }
       }
     }

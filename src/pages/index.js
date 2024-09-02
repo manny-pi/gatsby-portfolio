@@ -1,4 +1,3 @@
-import "../styles/index.css";
 import * as React from "react";
 import Layout from "../base-components/layout.js";
 
