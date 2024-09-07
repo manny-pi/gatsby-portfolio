@@ -52,9 +52,9 @@ export default function BlogIndex({ data }) {
 
   return (
     <Layout>
-      <div>
+      {/* <div>
         <TagSelector nodes={nodes} />
-      </div>
+      </div> */}
       <div>
         {nodes.map((node) => {
           let fm = node.frontmatter;

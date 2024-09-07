@@ -37,39 +37,6 @@ main {
   justify-content: space-evenly;
 }
 
-.header-button {
-  border: black solid 5px;
-  padding: 25px;
-  margin: 5px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  position: relative; /* Required for the pseudo-element */
-  overflow: hidden; /* Hide the overflow */
-  z-index: 1; /* Set a higher z-index for the parent element */
-}
-
-.header-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease;
-  z-index: -1; /* Set a lower z-index for the pseudo-element */
-}
-
-.header-button:hover::before {
-  transform: scaleX(1); /* Scale the pseudo-element to full width on hover */
-}
-
-#header-content-links {
-  display: flex;
-}
-
 /* Interactivity */
 .content-link a:hover {
   color: grey;

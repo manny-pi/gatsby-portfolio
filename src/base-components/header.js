@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as HeaderStyles from "../styles/header.css";
 import { Link } from "gatsby";
 
 function HeaderLink(props) {
