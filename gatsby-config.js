@@ -42,7 +42,9 @@ module.exports = {
     title: `Gatsby-Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     "gatsby-plugin-postcss",
     blogFilesystemOptions,
