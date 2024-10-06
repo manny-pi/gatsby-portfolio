@@ -24,16 +24,6 @@ main {
   padding-top: 25px;
 }
 
-/* Layout Style */
-/* #layout { } */
-
-#header {
-  margin: 0;
-  padding: 25px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 /* Navigation */
 .content-link { 
   min-width: 15em;
@@ -78,8 +68,7 @@ main {
 }
 
 .post-overview-section {
-  border: 5px solid red;
-  margin-bottom: 15px; 
+  /* margin-bottom: 15px;  */
 }
 
 .post-section {

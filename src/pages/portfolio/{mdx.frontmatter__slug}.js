@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import Layout from "../../base-components/layout";
+import Layout from "../../components/layout.js";
 
 export default function PortfolioPost({ data }) {
   let mdxNode = data.mdx;

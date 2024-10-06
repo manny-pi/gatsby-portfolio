@@ -1,7 +1,6 @@
-import * as React from "react";
-import Layout from "../../base-components/layout.js";
 import { graphql } from "gatsby";
-import alertGradient from "@material-tailwind/react/theme/components/alert/alertGradient.js";
+import * as React from "react";
+import Layout from "../../components/layout.js";
 
 export default function BlogPost({ data, children }) {
   let mdxNode = data.mdx;

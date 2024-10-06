@@ -1,6 +1,6 @@
-import * as React from "react";
-import * as HeaderStyles from "../styles/header.css";
 import { Link } from "gatsby";
+import * as React from "react";
+import "../styles/header.css";
 
 function HeaderLink(props) {
   return (
@@ -50,7 +50,7 @@ export default function Header(props) {
   */
   
   return (
-    <div id="header">
+    <header>
       <div id="header-content-links">
         <HeaderLink id="blog" to="/blog">
           Blog
@@ -67,6 +67,6 @@ export default function Header(props) {
           About
         </HeaderLink>
       </div>
-    </div>
+    </header>
   );
 }

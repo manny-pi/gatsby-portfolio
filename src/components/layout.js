@@ -3,13 +3,13 @@ import Header from "./header.js";
 
 export default function Layout({ children }) {
   return (
-    <div className="layout">
+    <section className="layout">
       <div className="page-wrapper">
         <Header />
         <main>
           <div className="content-area-wrapper">{children}</div>
         </main>
       </div>
-    </div>
+    </section>
   );
 }

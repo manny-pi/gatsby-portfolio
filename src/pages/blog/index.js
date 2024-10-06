@@ -1,6 +1,6 @@
 import { graphql, Link } from "gatsby";
 import * as React from "react";
-import Layout from "../../base-components/layout.js";
+import Layout from "../../components/layout.js";
 
 function TagSelector({ nodes }) {
 
