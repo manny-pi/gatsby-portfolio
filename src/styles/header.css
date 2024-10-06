@@ -9,6 +9,8 @@ header {
   justify-content: space-evenly;
   margin: 0;
   background-color: rgb(88, 179, 104);
+  /* border-bottom-left-radius: 25%; */
+  /* border-bottom-right-radius: 25%; */
   position: sticky;
   top: 0;
 }
