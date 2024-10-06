@@ -1,5 +1,9 @@
 node_modules/
 .vscode/
 .cache/
+<<<<<<< HEAD
 public
+=======
+public/
+>>>>>>> main
 makefile
