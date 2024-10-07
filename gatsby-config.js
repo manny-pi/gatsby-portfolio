@@ -1,5 +1,6 @@
 /*
-`gatsby-config` is for ... 
+`gatsby-config` is for setting up plugins, and other
+components that extend the functionality of the system. 
 */
 
 /**
@@ -30,29 +31,20 @@ portfolioFilesystemOptions = {
   },
 };
 
-s3hostingOptions = {
-  resolve: "gatsby-plugin-s3",
-  options: {
-    bucketName: "my-gatsby-portfolio"
-  }
-}
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby-Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://prince-o.dev`,
   },
   flags: {
-    DEV_SSR: true
+    // DEV_SSR: true
   },
   plugins: [
-    "gatsby-plugin-postcss",
     blogFilesystemOptions,
     lwmFilesystemOptions,
     portfolioFilesystemOptions,
     "gatsby-plugin-mdx",
     "gatsby-transformer-remark",
-    s3hostingOptions
   ],
 };
 

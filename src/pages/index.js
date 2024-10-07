@@ -5,9 +5,9 @@ export default function Index() {
   return (
     <Layout>
       <section>
-        <section className="welcome-message">
+        {/* <section className="welcome-message">
           <h1>Hi, I'm Prince!</h1>
-        </section>
+        </section> */}
         <section>
           <section>
             <p>
