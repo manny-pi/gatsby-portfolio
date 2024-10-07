@@ -10,7 +10,7 @@ export default function BlogPost({ data, children }) {
       return <div className="tag">{tag}</div>;
     });
   } catch (e) {
-    // alert("No tags on this post yet.");
+    /* */
   }
   
   return (

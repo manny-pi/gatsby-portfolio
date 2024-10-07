@@ -1,5 +1,9 @@
 @import "./global.css";
 
+* {
+  background-color: rgb(217, 217, 217);
+}
+
 body {
   margin: 0;
 }
@@ -8,7 +12,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   margin: 0;
-  background-color: rgb(88, 179, 104);
+  background-color: rgb(32, 76, 148);
   /* border-bottom-left-radius: 25%; */
   /* border-bottom-right-radius: 25%; */
   position: sticky;

@@ -3,11 +3,6 @@ import Layout from "../../components/layout.js";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
-// Filter button to select open-source contributions and projects
-// function filter() {
-  
-// }
-
 export default function LWMIndex({ data }) {
   const nodes = data.allMdx.nodes;
   return (
@@ -17,9 +12,13 @@ export default function LWMIndex({ data }) {
         return (
           <div key={node.id}>
             <div className="blog-content-card">
-              <h2 className="content-link"><Link to={fm.slug}>{fm.title}</Link></h2>
+              <h2 className="content-link">
+                <Link to={fm.slug}>{fm.title}</Link>
+              </h2>
               <h3>{fm.date}</h3>
-              <p><em>{node.excerpt}</em></p>
+              <p>
+                <em>{node.excerpt}</em>
+              </p>
             </div>
           </div>
         );
@@ -37,6 +36,7 @@ export const data = graphql`
           title
           slug
           date
+          type
         }
       }
     }
